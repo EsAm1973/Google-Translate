@@ -23,7 +23,6 @@ class TranslatorApi {
 
       if (response.statusCode == 200) {
         final jsonData = json.decode(response.body);
-        // Assuming response format has "translationText" or similar as the translated text key
         return jsonData['translation'] ?? "No translation available";
       } else {
         print('API response error: ${response.statusCode} - ${response.body}');
